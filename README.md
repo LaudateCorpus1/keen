@@ -11,12 +11,12 @@ to change in the future.
 
 ```go
 import (
-  "github.com/WatchBeam/keen"
-  "github.com/WatchBeam/keen/record"
+        "github.com/WatchBeam/keen"
+        "github.com/WatchBeam/keen/record"
 )
 
 type SimpleEvent struct {
-  Foo string `json:"foo"`
+        Foo string `json:"foo"`
 }
 
 var _ record.Event = new(SimpleEvent)
@@ -25,7 +25,7 @@ func (e *SimpleEvent) Collection string { return "collection" }
 
 recorder := keen.Recorder("project_id", "write_key")
 err := recorder.Record(&SimpleEvent{
-  Foo: bar,
+        Foo: "bar",
 })
 ```
 
