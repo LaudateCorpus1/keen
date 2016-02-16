@@ -1,4 +1,4 @@
-package main_test
+package keen_test
 
 import (
 	"testing"
@@ -9,7 +9,7 @@ import (
 )
 
 func TestRecordReturnsARecorder(t *testing.T) {
-	r := main.Recorder("project_id", "write_key")
+	r := keen.Recorder("project_id", "write_key")
 
 	assert.IsType(t, &record.Recorder{}, r)
 }
