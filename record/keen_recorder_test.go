@@ -15,7 +15,7 @@ func TestNewReturnsRecorder(t *testing.T) {
 	url, _ := url.Parse("https://api.keen.io/")
 	r := record.New(url, "project_id", "write_key")
 
-	assert.IsType(t, &record.Recorder{}, r)
+	assert.IsType(t, &record.KeenRecorder{}, r)
 }
 
 func TestRecordMakesSuccessfulRequests(t *testing.T) {
