@@ -11,5 +11,5 @@ import (
 func TestRecordReturnsARecorder(t *testing.T) {
 	r := keen.Recorder("project_id", "write_key")
 
-	assert.IsType(t, &record.Recorder{}, r)
+	assert.IsType(t, &record.KeenRecorder{}, r)
 }
